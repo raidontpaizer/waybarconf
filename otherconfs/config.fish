@@ -64,7 +64,7 @@ function __history_previous_command_arguments
     commandline -f history-token-search-backward
   case "*"
     commandline -i '$'
-  end
+end
 end
 
 if [ "$fish_key_bindings" = fish_vi_key_bindings ];
@@ -164,9 +164,9 @@ alias jctl 'journalctl -p 3 -xb'
 # Recent installed packages
 alias rip 'expac --timefmt="%Y-%m-%d %T" "%l\t%n %v" | sort | tail -200 | nl'
 
-## Run fastfetch if session is interactive
-if status --is-interactive && type -q fastfetch
-   fastfetch --load-config neofetch
+## Run neofetch if session is interactive
+if status --is-interactive && type -q neofetch
+   neofetch --sixel /home/radiat/Pictures/momiji.png
 end
 
 
